@@ -146,6 +146,11 @@ typedef struct _NmCli {
 	NMMetaTermColor editor_prompt_color;              /* Color of prompt in connection editor */
 } NmCli;
 
+#define NMC_RETURN(nmc, rvalue) \
+	G_STMT_START { \
+		return ((nmc)->return_value = (rvalue)); \
+	} G_STMT_END
+
 extern NmCli nm_cli;
 
 /* Error quark for GError domain */

@@ -25,6 +25,8 @@
 #include "nmcli.h"
 #include "nm-secret-agent-simple.h"
 
+const char *nmc_dbus_path_last_component (const char *dbus_path);
+
 gboolean print_ip4_config (NMIPConfig *cfg4, const NmcConfig *nmc_config, const char *one_field);
 gboolean print_ip6_config (NMIPConfig *cfg6, const NmcConfig *nmc_config, const char *group_prefix, const char *one_field);
 gboolean print_dhcp_config (NMDhcpConfig *dhcp, const NmcConfig *nmc_config, const char *group_prefix, const char *one_field);
